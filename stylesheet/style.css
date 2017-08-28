@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Hind|Montserrat');
+
+body {
+    word-spacing: 5px;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    font-family: "Hind", sans-serif;
+}
+
+strong a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Navigation Menu */
+ul {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5em;
+    z-index: 10000;
+}
+
+li {
+    float: left;
+    padding: 14px 16px;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+li:not(:last-child) a:after{
+    padding: 0 5px 0 20px;
+    content: '/';
+}
+
+li a:hover{
+    color: #5bc0de;
+}
+
+li a:hover:after {
+    color: white;
+}
+
+
+#nav-first-section, #nav-background {
+    position: relative;
+    min-width: 100%;
+    height:750px;
+}
+
+#nav-background {
+    position: absolute;
+    background-size: cover;
+    background-image: url("../images/intro-bg.jpg");
+}
+
+
+#nav-first-section #nav-rounded-profile-photos #rounded-profile-photo {
+    padding: 100px 0 0 0;
+    border-radius: 50%;
+    width:  35%;
+    height: 35%;
+}
+#nav-first-section #introduction {
+    position: relative;
+    padding: 70px;
+    text-align: center;
+    color: white;
+}
+
+#nav-first-section #introduction #description {
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+/*
+    About CSS
+*/
+
+#about #inner-about {
+    margin: 50px 0 0 120px;
+}
+
+#about #inner-about #inner-about-header{
+    font-size: 6.0em;
+}
+
+#about #inner-about #inner-about-header:after{
+    content: '';
+    position: absolute;
+    left    : 120px;
+    bottom: -205px;
+    width: 8%;
+    height: 1px;
+    padding: 1px;
+    border-top: 5px solid #000;
+}
+
+#about #inner-about #inner-about-description{
+    width: 45%;
+    height: auto;
+}
+
+/*
+    Project CSS
+*/
+
+
+/*
+    Education CSS
+*/
+
+
+
+
+
+
+/**
+   customize css for font-awesome down arrow button
+ */
+.fa {
+    color: #f2dede;
+    padding: 5px 10px 5px 10px;
+}
+
+.fa:hover{
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 5px 10px 5px 10px;
+    color: white;
+}
+
+.nav-footer {
+    padding: 15px 5px 5px 2px;
+    font-size: 1.3em;
+    font-weight:300;
+}
