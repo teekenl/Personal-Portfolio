@@ -1,150 +1,233 @@
-@import url('https://fonts.googleapis.com/css?family=Hind|Montserrat');
+*,html {
+    box-sizing: border-box;
+}
 
-body {
-    word-spacing: 5px;
-    overflow: auto;
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    user-select: none;
+}
+
+body{
     padding: 0;
     margin: 0;
-    max-width: 100%;
-    font-family: "Hind", sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    color: lavender;
 }
 
-strong a{
-    text-decoration: none;
-    color: black;
-}
-
-/* Navigation Menu */
-ul {
-    position: absolute;
-    top: 5%;
-    right: 10%;
-    list-style: none;
-    margin: 0;
-    overflow: hidden;
-    background-color: transparent;
-    color: white;
-    font-size: 1.5em;
-    z-index: 10000;
-}
-
-li {
-    float: left;
-    padding: 14px 16px;
-}
-
-li a{
-    display: block;
-    color: white;
-    text-align: center;
+a {
+    color: inherit;
+    cursor: pointer;
     text-decoration: none;
 }
 
-li:not(:last-child) a:after{
-    padding: 0 5px 0 20px;
-    content: '/';
+.link--text:hover{
+    text-decoration: underline;
 }
 
-li a:hover{
-    color: #5bc0de;
+.social_link_icon svg{
+    width: 32px;
+    height: 32px;
 }
 
-li a:hover:after {
-    color: white;
+.social_link_icon {
+    width: 32px;
+    height: 32px;
+    margin: 5px;
 }
 
-
-#nav-first-section, #nav-background {
-    position: relative;
-    min-width: 100%;
-    height:750px;
+.social_link_icon svg:hover {
+    animation: dance 1s;
+    -webkit-animation: dance 1s;
 }
 
-#nav-background {
-    position: absolute;
+div#particles-js{
     background-size: cover;
-    background-image: url("../images/intro-bg.jpg");
+    background:  #323840;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    opacity: 0.9;
+    z-index: -999999;
+    transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear;
 }
 
-
-#nav-first-section #nav-rounded-profile-photos #rounded-profile-photo {
-    padding: 100px 0 0 0;
-    border-radius: 50%;
-    width:  35%;
-    height: 35%;
-}
-#nav-first-section #introduction {
-    position: relative;
-    padding: 70px;
-    text-align: center;
+.section-header {
     color: white;
+    padding: 5px;
+    width: 110px;
+    margin-top: 40px;
+    background: #343838;
 }
 
-#nav-first-section #introduction #description {
+button {
+    color: inherit;
+    font-size: 1.2em;
+    font-family: sans-serif;
     padding: 10px;
-    font-size: 1.5em;
-    font-weight: 100;
+    border: 4px solid #343838;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color;
 }
 
-/*
-    About CSS
-*/
-
-#about #inner-about {
-    margin: 50px 0 0 120px;
-}
-
-#about #inner-about #inner-about-header{
-    font-size: 6.0em;
-}
-
-#about #inner-about #inner-about-header:after{
-    content: '';
-    position: absolute;
-    left    : 120px;
-    bottom: -205px;
-    width: 8%;
-    height: 1px;
-    padding: 1px;
-    border-top: 5px solid #000;
-}
-
-#about #inner-about #inner-about-description{
-    width: 45%;
-    height: auto;
-}
-
-/*
-    Project CSS
-*/
-
-
-/*
-    Education CSS
-*/
-
-
-
-
-
-
-/**
-   customize css for font-awesome down arrow button
- */
-.fa {
-    color: #f2dede;
-    padding: 5px 10px 5px 10px;
-}
-
-.fa:hover{
-    border-radius: 50%;
-    border: 1px solid white;
-    padding: 5px 10px 5px 10px;
+button:hover{
     color: white;
+    background: #343838;
 }
 
-.nav-footer {
-    padding: 15px 5px 5px 2px;
-    font-size: 1.3em;
-    font-weight:300;
+div#nav-wrapper {
+    width: inherit;
+    height: inherit;
+    margin: auto;
+    background: transparent;
+    z-index: 100000;
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+}
+
+
+div#nav-wrapper-header {
+    position: absolute;
+    top: 20%;
+    left: 38%;
+    text-align: center;
+}
+
+div#nav-wrapper-header #author_name {
+    font-size: 5.0em;
+}
+
+div#nav-wrapper-header #author_name_job_title {
+    font-size: 2.5em;
+    font-weight: 200;
+}
+
+div#nav-wrapper-content {
+    position: absolute;
+    width: 57%;
+    top: 45%;
+    left: 24%;
+}
+
+#credential-description-section1 {
+    float: left;
+}
+
+#credential-description-section2{
+    float:right;
+}
+
+#credential-descriptio-sections3{
+    clear:both;
+}
+
+#nav-wrapper-footer {
+    position: relative;
+}
+
+.anim {
+    opacity: 0;
+    -webkit-transform: translateY(-150px);
+    transform: translateY(-150px)
+}
+
+
+/* Dance Animation when icon is clicked or hovered */
+@-webkit-keyframes dance {
+    11.1% {
+        -webkit-transform: none;
+        transform: none
+    }
+
+    22.2% {
+        -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+        transform: skewX(-12.5deg) skewY(-12.5deg)
+    }
+
+    33.3% {
+        -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+        transform: skewX(6.25deg) skewY(6.25deg)
+    }
+
+    44.4% {
+        -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+        transform: skewX(-3.125deg) skewY(-3.125deg)
+    }
+
+    55.5% {
+        -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+        transform: skewX(1.5625deg) skewY(1.5625deg)
+    }
+
+    66.6% {
+        -webkit-transform: skewX(-.78125deg) skewY(-.78125deg);
+        transform: skewX(-.78125deg) skewY(-.78125deg)
+    }
+
+    77.7% {
+        -webkit-transform: skewX(.390625deg) skewY(.390625deg);
+        transform: skewX(.390625deg) skewY(.390625deg)
+    }
+
+    88.8% {
+        -webkit-transform: skewX(-.1953125deg) skewY(-.1953125deg);
+        transform: skewX(-.1953125deg) skewY(-.1953125deg)
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes dance {
+    11.1% {
+        -webkit-transform: none;
+        transform: none
+    }
+
+    22.2% {
+        -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+        transform: skewX(-12.5deg) skewY(-12.5deg)
+    }
+
+    33.3% {
+        -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+        transform: skewX(6.25deg) skewY(6.25deg)
+    }
+
+    44.4% {
+        -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+        transform: skewX(-3.125deg) skewY(-3.125deg)
+    }
+
+    55.5% {
+        -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+        transform: skewX(1.5625deg) skewY(1.5625deg)
+    }
+
+    66.6% {
+        -webkit-transform: skewX(-.78125deg) skewY(-.78125deg);
+        transform: skewX(-.78125deg) skewY(-.78125deg)
+    }
+
+    77.7% {
+        -webkit-transform: skewX(.390625deg) skewY(.390625deg);
+        transform: skewX(.390625deg) skewY(.390625deg)
+    }
+
+    88.8% {
+        -webkit-transform: skewX(-.1953125deg) skewY(-.1953125deg);
+        transform: skewX(-.1953125deg) skewY(-.1953125deg)
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none
+    }
 }
