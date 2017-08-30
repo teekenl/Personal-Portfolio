@@ -1,9 +1,10 @@
+
 *,html {
     box-sizing: border-box;
 }
 
 html {
-    font-family: sans-serif;
+    font-family: 'Nunito';
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     user-select: none;
@@ -16,6 +17,11 @@ body{
     width: 100%;
     overflow: auto;
     color: lavender;
+}
+
+.section-description p {
+    font-family: 'Oswald',sans-serif;
+    letter-spacing: 0.9px;
 }
 
 a {
@@ -50,7 +56,6 @@ div#particles-js{
     height: 100%;
     width: 100%;
     position: fixed;
-    opacity: 0.9;
     z-index: -999999;
     transition: opacity 1s linear;
     -webkit-transition: opacity 1s linear;
@@ -61,7 +66,7 @@ div#particles-js{
     padding: 5px;
     width: 110px;
     margin-top: 40px;
-    background: #343838;
+    background: lightslategrey;
 }
 
 button {
@@ -90,7 +95,6 @@ div#nav-wrapper {
     -webkit-transition: all 1s linear;
 }
 
-
 div#nav-wrapper-header {
     position: absolute;
     top: 20%;
@@ -100,11 +104,13 @@ div#nav-wrapper-header {
 
 div#nav-wrapper-header #author_name {
     font-size: 5.0em;
+    font-weight: 400;
 }
 
 div#nav-wrapper-header #author_name_job_title {
-    font-size: 2.5em;
-    font-weight: 200;
+    font-size: 2.2em;
+    margin-top: 20px;
+    font-weight: 100;
 }
 
 div#nav-wrapper-content {
@@ -122,12 +128,16 @@ div#nav-wrapper-content {
     float:right;
 }
 
-#credential-descriptio-sections3{
+#credential-description-sections3{
     clear:both;
 }
 
-#nav-wrapper-footer {
-    position: relative;
+div#nav-wrapper-footer {
+    position: absolute;
+    top: 270%;
+    left: 24%;
+    margin: 80px 0 120px 0;
+
 }
 
 .anim {
@@ -135,7 +145,6 @@ div#nav-wrapper-content {
     -webkit-transform: translateY(-150px);
     transform: translateY(-150px)
 }
-
 
 /* Dance Animation when icon is clicked or hovered */
 @-webkit-keyframes dance {
