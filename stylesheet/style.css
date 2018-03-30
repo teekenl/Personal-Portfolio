@@ -90,6 +90,12 @@ button:hover{
     background: #343838;
 }
 
+img {
+  border-radius: 50%;
+  width: 145px;
+  height: 150px;
+}
+
 div#nav-wrapper {
     width: inherit;
     height: inherit;
